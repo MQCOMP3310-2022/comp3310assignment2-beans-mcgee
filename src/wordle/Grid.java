@@ -1,3 +1,6 @@
+
+package wordle;
+
 import java.awt.Graphics;
 import java.util.BitSet;
 import java.util.Iterator;

@@ -1,3 +1,6 @@
+
+package wordle;
+
 import java.awt.Graphics;
 import java.awt.event.*;
 import java.io.BufferedReader;

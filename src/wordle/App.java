@@ -1,3 +1,7 @@
+
+package wordle;
+
+
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.*;
@@ -5,6 +9,9 @@ import java.time.Duration;
 import java.time.Instant;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+
+
 
 
 public final class App extends JFrame {

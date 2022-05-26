@@ -179,10 +179,6 @@ public class SQLiteConnectionManager {
                         {
                             return true;
                         } 
-                        else
-                        {
-                            return false;
-                        }
                     }
                      
                 }

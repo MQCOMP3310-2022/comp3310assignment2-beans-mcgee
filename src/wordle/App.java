@@ -22,7 +22,7 @@ public final class App extends JFrame {
         boolean stageBuilt = false;
 
         public WordleGame(){
-            setPreferredSize(new Dimension(330, 590));
+            setPreferredSize(new Dimension(330, 490));
             this.addKeyListener(this);
             board = new Board();
             stageBuilt = true;

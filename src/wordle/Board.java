@@ -6,6 +6,7 @@ import java.awt.event.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Random;
 // import java.util.Scanner;
 // import java.sql.Connection;
 // import java.sql.DriverManager;
@@ -60,8 +61,11 @@ public class Board {
 
 
         grid = new Grid(6,4, wordleDatabaseConnection);
-        secretWordIndex = 2;
-        String theWord = wordleDatabaseConnection.getWordAtIndex(2);
+        
+        Random rand = new Random();
+        secretWordIndex  = rand.nextInt(numberOfWords); //N words in databse = numberOfWords - 1
+
+        String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
         grid.setWord(theWord);
     }
 

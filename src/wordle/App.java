@@ -8,6 +8,7 @@ import java.awt.event.*;
 import java.time.Duration;
 import java.time.Instant;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
@@ -21,7 +22,7 @@ public final class App extends JFrame {
         boolean stageBuilt = false;
 
         public WordleGame(){
-            setPreferredSize(new Dimension(330, 490));
+            setPreferredSize(new Dimension(330, 590));
             this.addKeyListener(this);
             board = new Board();
             stageBuilt = true;
@@ -55,11 +56,13 @@ public final class App extends JFrame {
     }
 
     private App() {
+        this.setTitle("Wordle - Group 25");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         WordleGame canvas = new WordleGame();
         this.setContentPane(canvas);
         this.pack(); 
         this.setVisible(true);
+
     }
 
     public void run() {

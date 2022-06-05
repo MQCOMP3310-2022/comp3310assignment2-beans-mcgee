@@ -1,20 +1,28 @@
 package wordle;
 import javax.swing.*;
-import java.awt.*;
 
 public class resultPopup {
-    public static void popup(JFrame frame) {
+    static int streakCounter = 0;
+    static JFrame frame = new JFrame();
 
-        JDialog dialog = new JDialog(frame, "Yo", Dialog.ModalityType.TOOLKIT_MODAL);
+    public static void win(String word) {
+        streakCounter++;
+        JOptionPane.showMessageDialog(frame, "<html><center>Congratulations! The word was <b>"+word+"</b> <br> Streak count:" + Integer.toString(streakCounter));
+        Board.resetGame();
 
-        dialog.setLayout(new FlowLayout());
-
-        dialog.setBounds(500, 300, 400, 300);
-
-
-        JLabel label = new JLabel("Press close button");
-
-        dialog.add(label);
-        dialog.setVisible(true);
     }
+
+    public static void lose(String word) {
+        streakCounter = 0;
+
+        JOptionPane.showMessageDialog(frame, "<html><center>Sorry, the word was "+ word);
+        Board.resetGame();
+    }
+
+    public static void resetStreak() {
+        streakCounter = 0;
+    }
+    
+
+
 }

@@ -54,17 +54,17 @@ public final class App extends JFrame {
         window.run();
     }
 
-    private App() {
-        this.setTitle("Wordle - Group 25");
+    public App() {
+        this.setTitle("COMP3310 Wordle By Beans Mcgee");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         WordleGame canvas = new WordleGame();
         this.setContentPane(canvas);
         this.pack(); 
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null); // center of screen
         this.setVisible(true);
 
-        resultPopup.popup(this);
     }
+
 
 
 

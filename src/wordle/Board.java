@@ -12,12 +12,14 @@ import java.util.Random;
 // import java.sql.DriverManager;
 // import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 
 public class Board {
-    Grid grid;
-    SQLiteConnectionManager wordleDatabaseConnection;
-    int secretWordIndex;
-    int numberOfWords;
+    static Grid grid;
+    static SQLiteConnectionManager wordleDatabaseConnection;
+    static int secretWordIndex;
+    static int numberOfWords;
 
     public Board(){
         wordleDatabaseConnection = new SQLiteConnectionManager("words.db");
@@ -89,11 +91,17 @@ public class Board {
             System.out.println("Backspace Key");
         }
         if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
-            grid.keyPressedEscape();
             
-            secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
-            String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
-            grid.setWord(theWord);
+            int confirmChoice = JOptionPane.showConfirmDialog(null, "Are you sure you want to reset? Streak count will be reset", "Confirmation dialog",  JOptionPane.OK_CANCEL_OPTION);
+            if (confirmChoice == JOptionPane.OK_OPTION) { // Confirmation before user wants to reset as it will reset streak
+                grid.keyPressedEscape();
+                
+                secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+                String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
+                grid.setWord(theWord);
+
+                resultPopup.resetStreak();;
+            }
 
             System.out.println("Escape Key");
         }
@@ -102,5 +110,13 @@ public class Board {
             System.out.println("Character Key");
         }
 
+    }
+
+    public static void resetGame() {
+        grid.keyPressedEscape();
+            
+            secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+            String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
+            grid.setWord(theWord);
     }
 }

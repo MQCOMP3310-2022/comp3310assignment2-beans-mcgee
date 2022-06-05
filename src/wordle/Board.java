@@ -56,7 +56,7 @@ public class Board {
                 String line;
                 int i = 1;
                 while ((line = br.readLine()) != null) {
-                   wordleDatabaseConnection.addValidWord(i,line);
+                   wordleDatabaseConnection.addValidWord(i,line.toUpperCase()); // Keeping it consistent
                    i++;
                 }
                 numberOfWords = i;
@@ -114,8 +114,9 @@ public class Board {
 
            logger.log(Level.INFO, "Escape Key");
         }
-        if(e.getKeyCode()>= KeyEvent.VK_A && e.getKeyCode() <= KeyEvent.VK_Z){
-            grid.keyPressedLetter(e.getKeyChar());
+
+        if((e.getKeyChar() >= 'A' && e.getKeyChar() <= 'Z') || (e.getKeyChar() >= 'a' && e.getKeyChar() <= 'z' )){ // Alphabetical letter filter
+            grid.keyPressedLetter(Character.toUpperCase(e.getKeyChar()));
             logger.log(Level.INFO, "Character Key");
         }
 

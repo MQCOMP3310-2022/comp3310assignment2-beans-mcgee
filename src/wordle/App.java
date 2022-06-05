@@ -57,7 +57,7 @@ public final class App extends JFrame {
         
         @Override
         public void keyReleased (KeyEvent e) {
-            board.keyPressed(e);
+            Board.keyPressed(e);
         }    
 
         @Override
@@ -72,7 +72,7 @@ public final class App extends JFrame {
     }
 
     public App() {
-        this.setTitle("COMP3310 Wordle By Beans Mcgee");
+        this.setTitle("Wordle By Beans Mcgee");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         WordleGame canvas = new WordleGame();
         this.setContentPane(canvas);

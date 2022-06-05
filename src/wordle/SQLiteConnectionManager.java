@@ -152,7 +152,6 @@ public class SQLiteConnectionManager {
         String result = "";
         try (Connection conn = DriverManager.getConnection(databaseURL);
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            //pstmt.setInt(1, index);
             ResultSet cursor = pstmt.executeQuery();
             if(cursor.next()){
                 logger.log(Level.INFO, "successful next curser sqlite");

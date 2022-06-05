@@ -61,11 +61,7 @@ public class Board {
                 setupStage = 2;
             }catch(IOException e)
             {
-<<<<<<< HEAD
                 logger.log(Level.INFO, e.getMessage());
-=======
-                logging.log(Level.INFO, e.getMessage());
->>>>>>> 0f3a98e935cc29bde986260fed369c92987468b7
             }
 
         }

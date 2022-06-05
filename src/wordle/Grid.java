@@ -5,9 +5,27 @@ import java.awt.Graphics;
 import java.util.BitSet;
 import java.util.Iterator;
 import java.util.function.Consumer;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 
 public class Grid implements Iterable<Cell>{
+
+    static {
+ 
+        try {
+            LogManager.getLogManager().readConfiguration(new FileInputStream("resources/logging.properties"));
+        } catch (SecurityException | IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    static final Logger logger = Logger.getLogger(Grid.class.getName());
+
+
     Cell[][] cells;
     int activeRow;
     int activeColumn;
@@ -123,7 +141,7 @@ public class Grid implements Iterable<Cell>{
 
     void keyPressedLetter(char letter){
         if(!gameFinished){
-            System.out.println("grid keypress received letter: " + letter);
+            logger.log(Level.INFO, "grid keypress received letter: " + letter);
             cells[activeRow][activeColumn].setCharacter(letter, 1);
             if(activeColumn < cells[activeRow].length -1){
                 //not last character

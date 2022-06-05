@@ -10,12 +10,28 @@ import java.time.Instant;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 
 
 
 
 public final class App extends JFrame {
+
+    static {
+ 
+        try {
+            LogManager.getLogManager().readConfiguration(new FileInputStream("resources/logging.properties"));
+        } catch (SecurityException | IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+  
+    static final Logger logger = Logger.getLogger(App.class.getName());
 
     class WordleGame extends JPanel implements KeyListener{
         Board board;
@@ -74,9 +90,9 @@ public final class App extends JFrame {
             try {
                 Thread.sleep(20L - howLong);
             } catch (InterruptedException e) {
-                System.out.println("thread was interrupted, but who cares?");
+                logger.log(Level.WARNING, "thread was interrupted, but who cares?");
             } catch (IllegalArgumentException e) {
-                System.out.println("application can't keep up with framerate");
+                logger.log(Level.WARNING, "application can't keep up with framerate");
             }
         }
     }

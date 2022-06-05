@@ -7,6 +7,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.io.FileInputStream;
+import java.io.IOException;
 // import java.util.Scanner;
 // import java.sql.Connection;
 // import java.sql.DriverManager;
@@ -14,6 +19,18 @@ import java.util.Random;
 
 
 public class Board {
+
+    static {
+ 
+        try {
+            LogManager.getLogManager().readConfiguration(new FileInputStream("resources/logging.properties"));
+        } catch (SecurityException | IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    static final Logger logger = Logger.getLogger(Board.class.getName());
+
     Grid grid;
     SQLiteConnectionManager wordleDatabaseConnection;
     int secretWordIndex;
@@ -26,10 +43,10 @@ public class Board {
         wordleDatabaseConnection.createNewDatabase("words.db");
         if (wordleDatabaseConnection.checkIfConnectionDefined())
         {
-            System.out.println("Wordle created and connected.");
+            logger.log(Level.INFO, "Wordle created and connected.");
             if(wordleDatabaseConnection.createWordleTables())
             {
-                System.out.println("Wordle structures in place.");
+                logger.log(Level.INFO, "Wordle structures in place.");
                 setupStage = 1;
             }
         }
@@ -42,7 +59,6 @@ public class Board {
                 String line;
                 int i = 1;
                 while ((line = br.readLine()) != null) {
-                   //System.out.println(line);
                    wordleDatabaseConnection.addValidWord(i,line);
                    i++;
                 }
@@ -50,12 +66,12 @@ public class Board {
                 setupStage = 2;
             }catch(IOException e)
             {
-                System.out.println(e.getMessage());
+                //logging.log(Level.INFO, e.getMessage());
             }
 
         }
         else{
-            System.out.println("Not able to Launch. Sorry!");
+            logger.log(Level.SEVERE, "Not able to Launch. Sorry!");
         }
 
 
@@ -78,15 +94,15 @@ public class Board {
     }    
 
     public void keyPressed(KeyEvent e){
-        System.out.println("Key Pressed! " + e.getKeyCode());
+        logger.log(Level.INFO, "Key Pressed! " + e.getKeyCode());
 
         if(e.getKeyCode() == KeyEvent.VK_ENTER){
             grid.keyPressedEnter();
-            System.out.println("Enter Key");
+            logger.log(Level.INFO, "Enter Key");
         }
         if(e.getKeyCode() == KeyEvent.VK_BACK_SPACE){
             grid.keyPressedBackspace();
-            System.out.println("Backspace Key");
+            logger.log(Level.INFO, "Backspace Key");
         }
         if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
             grid.keyPressedEscape();
@@ -95,11 +111,11 @@ public class Board {
             String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
             grid.setWord(theWord);
 
-            System.out.println("Escape Key");
+           logger.log(Level.INFO, "Escape Key");
         }
         if(e.getKeyCode()>= KeyEvent.VK_A && e.getKeyCode() <= KeyEvent.VK_Z){
             grid.keyPressedLetter(e.getKeyChar());
-            System.out.println("Character Key");
+            logger.log(Level.INFO, "Character Key");
         }
 
     }

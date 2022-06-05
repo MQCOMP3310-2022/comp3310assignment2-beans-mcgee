@@ -7,6 +7,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+
 public class Cell extends Rectangle{
     private static int size = 70;
     protected int col;

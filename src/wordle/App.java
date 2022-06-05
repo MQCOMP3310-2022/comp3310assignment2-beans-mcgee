@@ -7,9 +7,7 @@ import java.awt.Graphics;
 import java.awt.event.*;
 import java.time.Duration;
 import java.time.Instant;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -62,7 +60,8 @@ public final class App extends JFrame {
         }    
 
         @Override
-        public void keyTyped (KeyEvent e) {}    
+        public void keyTyped (KeyEvent e) {}  
+        
 
     }
 

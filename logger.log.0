@@ -2512,3 +2512,461 @@ Jun 05, 2022 5:24:58 PM wordle.Board keyPressed
 INFO: Key Pressed! 10
 Jun 05, 2022 5:24:58 PM wordle.Board keyPressed
 INFO: Enter Key
+June 05, 2022 10:59:27 PM wordle.SQLiteConnectionManager createNewDatabase
+INFO: The driver name is SQLite JDBC
+June 05, 2022 10:59:27 PM wordle.SQLiteConnectionManager createNewDatabase
+INFO: A new database has been created.
+June 05, 2022 10:59:27 PM wordle.Board <init>
+INFO: Wordle created and connected.
+June 05, 2022 10:59:27 PM wordle.Board <init>
+INFO: Wordle structures in place.
+June 05, 2022 10:59:29 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 10:59:29 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 10:59:29 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=74;
+June 05, 2022 10:59:29 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: deal
+June 05, 2022 10:59:30 PM wordle.Board keyPressed
+INFO: Key Pressed! 27
+June 05, 2022 10:59:31 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 10:59:31 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 10:59:31 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=75;
+June 05, 2022 10:59:31 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: dean
+June 05, 2022 10:59:31 PM wordle.Board keyPressed
+INFO: Escape Key
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:32 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Key Pressed! 65
+June 05, 2022 10:59:32 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: a
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Key Pressed! 8
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Backspace Key
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Key Pressed! 8
+June 05, 2022 10:59:32 PM wordle.Board keyPressed
+INFO: Backspace Key
+June 05, 2022 10:59:33 PM wordle.Board keyPressed
+INFO: Key Pressed! 8
+June 05, 2022 10:59:33 PM wordle.Board keyPressed
+INFO: Backspace Key
+June 05, 2022 10:59:36 PM wordle.Board keyPressed
+INFO: Key Pressed! 65
+June 05, 2022 10:59:36 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: a
+June 05, 2022 10:59:36 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Key Pressed! 67
+June 05, 2022 10:59:37 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: c
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Key Pressed! 73
+June 05, 2022 10:59:37 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: i
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Key Pressed! 68
+June 05, 2022 10:59:37 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: d
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:37 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 65
+June 05, 2022 10:59:38 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: a
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 67
+June 05, 2022 10:59:38 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: c
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:38 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 68
+June 05, 2022 10:59:38 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: d
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:38 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:38 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:38 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:39 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:39 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:40 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:40 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:40 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:40 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 10:59:40 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 10:59:40 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 10:59:40 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 10:59:43 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 10:59:43 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 10:59:43 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=76;
+June 05, 2022 10:59:43 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: dear
+June 05, 2022 10:59:43 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 10:59:43 PM wordle.Board keyPressed
+INFO: Key Pressed! 27
+June 05, 2022 10:59:44 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 10:59:44 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 10:59:44 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=77;
+June 05, 2022 10:59:44 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: debt
+June 05, 2022 10:59:44 PM wordle.Board keyPressed
+INFO: Escape Key
+June 05, 2022 11:06:43 PM wordle.SQLiteConnectionManager createNewDatabase
+INFO: The driver name is SQLite JDBC
+June 05, 2022 11:06:44 PM wordle.SQLiteConnectionManager createNewDatabase
+INFO: A new database has been created.
+June 05, 2022 11:06:44 PM wordle.Board <init>
+INFO: Wordle created and connected.
+June 05, 2022 11:06:44 PM wordle.Board <init>
+INFO: Wordle structures in place.
+June 05, 2022 11:06:45 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 11:06:45 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 11:06:45 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=385;
+June 05, 2022 11:06:45 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: sign
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:47 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Key Pressed! 65
+June 05, 2022 11:06:47 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: a
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Key Pressed! 67
+June 05, 2022 11:06:47 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: c
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:47 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:47 PM wordle.Board keyPressed
+INFO: Key Pressed! 92
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Key Pressed! 87
+June 05, 2022 11:06:48 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: w
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:48 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:48 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:48 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:48 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:49 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:49 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 69
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: e
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Key Pressed! 70
+June 05, 2022 11:06:50 PM wordle.Grid keyPressedLetter
+INFO: grid keypress received letter: f
+June 05, 2022 11:06:50 PM wordle.Board keyPressed
+INFO: Character Key
+June 05, 2022 11:06:51 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:52 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 11:06:52 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 11:06:52 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=386;
+June 05, 2022 11:06:52 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: site
+June 05, 2022 11:06:52 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:06:52 PM wordle.Board keyPressed
+INFO: Key Pressed! 10
+June 05, 2022 11:06:52 PM wordle.Board keyPressed
+INFO: Enter Key
+June 05, 2022 11:16:27 PM wordle.SQLiteConnectionManager createNewDatabase
+INFO: The driver name is SQLite JDBC
+June 05, 2022 11:16:27 PM wordle.SQLiteConnectionManager createNewDatabase
+INFO: A new database has been created.
+June 05, 2022 11:16:27 PM wordle.Board <init>
+INFO: Wordle created and connected.
+June 05, 2022 11:16:27 PM wordle.Board <init>
+INFO: Wordle structures in place.
+June 05, 2022 11:16:28 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: successful next curser sqlite
+June 05, 2022 11:16:28 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: getWordAtIndex===========================
+June 05, 2022 11:16:28 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: sql: SELECT word FROM validWords where id=327;
+June 05, 2022 11:16:28 PM wordle.SQLiteConnectionManager getWordAtIndex
+INFO: result: post

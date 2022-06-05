@@ -20,8 +20,11 @@ public class Board {
     static SQLiteConnectionManager wordleDatabaseConnection;
     static int secretWordIndex;
     static int numberOfWords;
+    static Random randomNumber;
+    
 
     public Board(){
+        randomNumber = new Random();
         wordleDatabaseConnection = new SQLiteConnectionManager("words.db");
         int setupStage = 0;
 
@@ -64,8 +67,8 @@ public class Board {
 
         grid = new Grid(6,4, wordleDatabaseConnection);
         
-        Random rand = new Random();
-        secretWordIndex  = rand.nextInt(numberOfWords); //N words in databse = numberOfWords - 1
+        randomNumber = new Random();
+        secretWordIndex  = randomNumber.nextInt(numberOfWords); //N words in databse = numberOfWords - 1
 
         String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
         grid.setWord(theWord);
@@ -96,7 +99,7 @@ public class Board {
             if (confirmChoice == JOptionPane.OK_OPTION) { // Confirmation before user wants to reset as it will reset streak
                 grid.keyPressedEscape();
                 
-                secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+                secretWordIndex = randomNumber.nextInt(numberOfWords);
                 String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
                 grid.setWord(theWord);
 
@@ -115,7 +118,9 @@ public class Board {
     public static void resetGame() {
         grid.keyPressedEscape();
             
-            secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+        randomNumber = new Random();
+        secretWordIndex  = randomNumber.nextInt(numberOfWords); //N words in databse = numberOfWords - 1
+        
             String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
             grid.setWord(theWord);
     }

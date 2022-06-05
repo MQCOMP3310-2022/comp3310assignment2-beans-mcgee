@@ -88,7 +88,7 @@ public class Board {
         grid.paint(g);
     }    
 
-    public void keyPressed(KeyEvent e){
+    public static void keyPressed(KeyEvent e){
         logger.log(Level.INFO, "Key Pressed! " + e.getKeyCode());
 
         if(e.getKeyCode() == KeyEvent.VK_ENTER){
@@ -104,8 +104,8 @@ public class Board {
             int confirmChoice = JOptionPane.showConfirmDialog(null, "Are you sure you want to reset? Streak count will be reset", "Confirmation dialog",  JOptionPane.OK_CANCEL_OPTION);
             if (confirmChoice == JOptionPane.OK_OPTION) { // Confirmation before user wants to reset as it will reset streak
                 grid.keyPressedEscape();
-                
-                secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+                Random rand = new Random();
+                secretWordIndex = (rand.nextInt(numberOfWords)) % numberOfWords;
                 String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
                 grid.setWord(theWord);
 
@@ -124,7 +124,8 @@ public class Board {
     public static void resetGame() {
         grid.keyPressedEscape();
             
-            secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+            Random rand = new Random();
+            secretWordIndex  = rand.nextInt(numberOfWords);
             String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
             grid.setWord(theWord);
     }

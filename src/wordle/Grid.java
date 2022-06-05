@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 
+
 public class Grid implements Iterable<Cell>{
 
     static {
@@ -32,6 +33,7 @@ public class Grid implements Iterable<Cell>{
     String wordToGuess;
     boolean gameFinished;
     SQLiteConnectionManager wordleDatabaseConnection;
+
     
     public Grid(int rows, int wordLength, SQLiteConnectionManager sqlConn){
         cells = new Cell[rows][wordLength];
@@ -87,6 +89,8 @@ public class Grid implements Iterable<Cell>{
 		return new CellIterator(cells);
 	}
 
+
+
     void keyPressedBackspace(){
         if(!gameFinished){
             cells[activeRow][activeColumn].setCharacter(' ', 0);
@@ -102,7 +106,7 @@ public class Grid implements Iterable<Cell>{
         reset();
     }
 
-    void keyPressedEnter(){
+    void keyPressedEnter() {
         if(!gameFinished){
             
             //is the row full? If so, let's compare!
@@ -116,6 +120,11 @@ public class Grid implements Iterable<Cell>{
                         cells[activeRow][i].setState(3);
                     }
                     gameFinished = true;
+                    
+                    resultPopup.win(wordToGuess);
+
+                    
+
                 }else{
                     if(activeRow >= cells.length-1){
                         // run out of guesses to use
@@ -124,6 +133,7 @@ public class Grid implements Iterable<Cell>{
                             cells[activeRow][i].setState(4);
                         }
                         gameFinished = true;
+                        resultPopup.lose(wordToGuess);
                     }else{
                         //do stuff to highlihgt correct characters
                         applyHighlightingToCurrentRow();
@@ -150,6 +160,8 @@ public class Grid implements Iterable<Cell>{
                 cells[activeRow][activeColumn].setActive();
             }
             // if they keep on typing characters, then just repopulate the last valye
+        } else {
+            resultPopup.lose(wordToGuess);
         }
     }
 

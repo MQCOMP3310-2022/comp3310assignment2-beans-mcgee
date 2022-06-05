@@ -41,6 +41,7 @@ public final class App extends JFrame {
             board = new Board();
             stageBuilt = true;
             this.setFocusable(true);
+            pack();
             this.requestFocus();
         }
 
@@ -70,15 +71,19 @@ public final class App extends JFrame {
         window.run();
     }
 
-    private App() {
-        this.setTitle("Wordle - Group 25");
+    public App() {
+        this.setTitle("COMP3310 Wordle By Beans Mcgee");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         WordleGame canvas = new WordleGame();
         this.setContentPane(canvas);
         this.pack(); 
+        this.setLocationRelativeTo(null); // center of screen
         this.setVisible(true);
 
     }
+
+
+
 
     public void run() {
         while (true) {

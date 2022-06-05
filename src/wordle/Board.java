@@ -12,6 +12,8 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.io.FileInputStream;
 
+import javax.swing.JOptionPane;
+
 
 public class Board {
 
@@ -26,10 +28,10 @@ public class Board {
 
     static final Logger logger = Logger.getLogger(Board.class.getName());
 
-    Grid grid;
-    SQLiteConnectionManager wordleDatabaseConnection;
-    int secretWordIndex;
-    int numberOfWords;
+    static Grid grid;
+    static SQLiteConnectionManager wordleDatabaseConnection;
+    static int secretWordIndex;
+    static int numberOfWords;
 
     public Board(){
         wordleDatabaseConnection = new SQLiteConnectionManager("words.db");
@@ -98,11 +100,17 @@ public class Board {
             logger.log(Level.INFO, "Backspace Key");
         }
         if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
-            grid.keyPressedEscape();
             
-            secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
-            String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
-            grid.setWord(theWord);
+            int confirmChoice = JOptionPane.showConfirmDialog(null, "Are you sure you want to reset? Streak count will be reset", "Confirmation dialog",  JOptionPane.OK_CANCEL_OPTION);
+            if (confirmChoice == JOptionPane.OK_OPTION) { // Confirmation before user wants to reset as it will reset streak
+                grid.keyPressedEscape();
+                
+                secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+                String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
+                grid.setWord(theWord);
+
+                resultPopup.resetStreak();;
+            }
 
            logger.log(Level.INFO, "Escape Key");
         }
@@ -111,5 +119,13 @@ public class Board {
             logger.log(Level.INFO, "Character Key");
         }
 
+    }
+
+    public static void resetGame() {
+        grid.keyPressedEscape();
+            
+            secretWordIndex = ( secretWordIndex + 1 ) % numberOfWords;
+            String theWord = wordleDatabaseConnection.getWordAtIndex(secretWordIndex);
+            grid.setWord(theWord);
     }
 }

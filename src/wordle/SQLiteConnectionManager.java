@@ -27,7 +27,6 @@ public class SQLiteConnectionManager {
   
     static final Logger logger = Logger.getLogger(SQLiteConnectionManager.class.getName());
 
-    //private Connection wordleDBConn = null;
     private String databaseURL = "";
     
     private String wordleDropTableString = "DROP TABLE IF EXISTS wordlist;";
@@ -43,9 +42,6 @@ public class SQLiteConnectionManager {
         + "	id integer PRIMARY KEY,\n"
         + "	word text NOT NULL\n"
         + ");";
-
-    //private String populateWordle;
-    //private String populateValidWords;
 
 
     /**

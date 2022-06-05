@@ -84,7 +84,7 @@ public class SQLiteConnectionManager {
      * @return true if the file exists in the correct location, false otherwise. If no url defined, also false.
      */
     public boolean checkIfConnectionDefined(){
-        if(databaseURL == ""){
+        if(databaseURL.isEmpty()){
             return false;
         }else{
             try (Connection conn = DriverManager.getConnection(databaseURL)) {
@@ -105,7 +105,7 @@ public class SQLiteConnectionManager {
      * @return true if the table structures have been created.
      */
     public boolean createWordleTables(){
-        if(databaseURL != ""){
+        if(!databaseURL.isEmpty()){
             try (   Connection conn = DriverManager.getConnection(databaseURL);
                     Statement stmt = conn.createStatement()
                 ) 
@@ -179,6 +179,7 @@ public class SQLiteConnectionManager {
      */
     public boolean isValidWord(String guess)
     {
+        if(guess.matches("^[a-z]{4}$")){
         String sql = "SELECT count(id) as total FROM validWords WHERE word like'"+guess+"';";
         
         try (   Connection conn = DriverManager.getConnection(databaseURL);
@@ -204,6 +205,10 @@ public class SQLiteConnectionManager {
                 logger.log(Level.SEVERE, e.getMessage());
                 return false;
             }
-
+        }
+        else {
+            return false;
+        }    
     }
+
 }

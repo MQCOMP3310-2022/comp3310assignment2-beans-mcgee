@@ -60,7 +60,8 @@ public final class App extends JFrame {
         }    
 
         @Override
-        public void keyTyped (KeyEvent e) {}    
+        public void keyTyped (KeyEvent e) {}  
+        
 
     }
 

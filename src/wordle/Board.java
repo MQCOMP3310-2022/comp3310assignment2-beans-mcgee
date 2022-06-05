@@ -11,11 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.io.FileInputStream;
-import java.io.IOException;
-// import java.util.Scanner;
-// import java.sql.Connection;
-// import java.sql.DriverManager;
-// import java.sql.SQLException;
 
 
 public class Board {
@@ -66,15 +61,17 @@ public class Board {
                 setupStage = 2;
             }catch(IOException e)
             {
+<<<<<<< HEAD
                 logger.log(Level.INFO, e.getMessage());
+=======
+                logging.log(Level.INFO, e.getMessage());
+>>>>>>> 0f3a98e935cc29bde986260fed369c92987468b7
             }
 
         }
         else{
             logger.log(Level.SEVERE, "Not able to Launch. Sorry!");
         }
-
-
 
         grid = new Grid(6,4, wordleDatabaseConnection);
         

@@ -56,8 +56,8 @@ public class Board {
                 String line;
                 int i = 1;
                 while ((line = br.readLine()) != null) {
-                   wordleDatabaseConnection.addValidWord(i,line.toUpperCase()); // Keeping it consistent
-                   i++;
+                   wordleDatabaseConnection.addValidWord(i,line.toUpperCase()); // Making everything CAPITALIZED
+                   i++;                                                         // Visually Looks better that way
                 }
                 numberOfWords = i;
                 setupStage = 2;
